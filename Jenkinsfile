@@ -1,6 +1,6 @@
 def registry = 'https://isstephen.jfrog.io'
 def imageName = 'isstephen.jfrog.io/valaxy-docker-local/ttrend'
-def version   = '2.1.2'
+def version   = '2.1.3'
 
 pipeline {
     agent {
@@ -19,7 +19,7 @@ pipeline {
                 sh 'mvn clean deploy'
             }
         }
-        
+
         stage('test') {
             steps {
                 sh 'mvn test'
