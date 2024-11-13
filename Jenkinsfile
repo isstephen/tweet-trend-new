@@ -67,7 +67,7 @@ pipeline {
         }
     }
     
-    stage ("Deploy"){
+    stage ("Deploy - Kubernete"){
         steps {
             script {
                 sh './deploy.sh'
