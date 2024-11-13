@@ -55,7 +55,7 @@ pipeline {
       }
     }
 
-            stage (" Docker Publish "){
+    stage (" Docker Publish "){
         steps {
             script {
                echo '<--------------- Docker Publish Started --------------->'  
@@ -66,5 +66,12 @@ pipeline {
             }
         }
     }
+    
+    stage ("Deploy"){
+        steps {
+            script {
+                sh './deploy.sh'
+            }
+        }
     }
 }
